@@ -26,9 +26,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<main class="site-main" id="main">
 
-				<?php get_template_part('global-templates/intro') ?>
+				<?php get_template_part('global-templates/intro') ?> 
 				<?php get_template_part('global-templates/usps') ?>
-				<?php get_template_part('global-templates/portfolio') ?>
+ 				<?php get_template_part('global-templates/portfolio') ?>
 				<?php get_template_part('global-templates/languages') ?>
 				<?php get_template_part('global-templates/testimonials') ?>
 				<?php get_template_part('global-templates/contact'); ?>
