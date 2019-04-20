@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
+<div class="wrapper bg-primary" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
@@ -24,15 +24,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 			<div class="col-md-12">
 
-				<footer class="site-footer" id="colophon">
+				<footer class="site-footer">
 
-					<div class="site-info">
-
-						<?php understrap_site_info(); ?>
+					<div class="row">
+						<div class="col text-center">
+							<i class="fab fa-linkedin-in">text</i>
+						</div>
+						<div class="col text-center">
+							<i class="fab fa-linkedin-in">text</i>
+						</div>
+						<div class="col text-center">
+							<i class="fab fa-linkedin-in">text</i>
+						</div>
+						<div class="col text-center">
+							<i class="fab fa-linkedin-in">text</i>
+						</div>
+					</div>
 
 					</div><!-- .site-info -->
 
-				</footer><!-- #colophon -->
+				</footer><!-- end footer -->
 
 			</div><!--col end -->
 

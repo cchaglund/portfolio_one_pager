@@ -42,8 +42,10 @@
 
   // submit button, inherit .btn and .btn-outline-primary classes.
   input[type=submit] {
+    width: auto;
     @extend .btn;
     @extend .btn-outline-primary;
+    @extend .mx-auto;
   }
 
   .wpcf7-form {
@@ -51,11 +53,23 @@
     // set paragraphs to behave like divs with class .form-group
     p {
       @extend .form-group;
+      display: flex;
     }
 
     // let labels be 100%
     label {
       width: 100%;
+      .form-title {
+        padding: 0.5rem;
+        background-color: green;
+      }
+     .wpcf7-form-control {
+      }
+
+      input[name=your-email], textarea[name=your-message] {
+          background-color: lightgray;
+          border-radius: 0;
+      }
     }
   }
 
