@@ -5,7 +5,7 @@
 
 				<div class="row justify-content-center">
 
-					<div class="col-12 col-md-6">
+					<div class="col-12 col-md-6 col-lg-4">
 						<div class="container-fluid">
 							<div class="usp row mb-4">
 								<div class="usp-header col-auto p-2 bg-warning">
@@ -18,7 +18,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-md-6">
+					<div class="col-12 col-md-6 col-lg-4">
 						<div class="container-fluid">
 							<div class="usp row mb-4">
 								<div class="usp-header col-auto p-2 bg-warning">
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-md-6">
+					<div class="col-12 col-md-6 col-lg-4">
 						<div class="container-fluid">
 							<div class="usp row mb-4">
 								<div class="usp-header col-auto p-2 bg-warning">
