@@ -1,10 +1,12 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
 @import 'contact-form7';
-
-#contact-title {
-	background-color: lightgray;
-}
+@import 'usps';
+@import 'projects';
+@import 'testimonials';
+@import 'languages';
+@import 'intro';
+@import 'contact';
 
 nav {
 	background-color: blue;
