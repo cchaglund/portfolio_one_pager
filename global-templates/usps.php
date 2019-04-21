@@ -1,3 +1,25 @@
+<?php
+/**
+ * Hero setup.
+ *
+ * @package understrap
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+$usps = new WP_query([
+	'post_type' => 'pop_usp',
+	'posts_per_page' => 3
+]);
+
+if (!$usps->have_posts()) {
+	return;
+}
+
+?>
+
 <div id="wrapper-usps" class="wrapper">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -5,44 +27,14 @@
 
 				<div class="row justify-content-center">
 
-					<div class="col-12 col-md-6 col-lg-4">
-						<div class="container-fluid">
-							<div class="usp row mb-4">
-								<div class="usp-header col-auto p-2 bg-warning">
-									Hardworking
-								</div>
-								<div class="usp-body col-12 p-2 bg-dark">
-									Always work really hard
-								</div>
-							</div>
-						</div>
-					</div>
+					<?php 
+						while ($usps->have_posts()) {
+							$usps->the_post();
+							get_template_part('loop-templates/content', 'usp');
+						}
 
-					<div class="col-12 col-md-6 col-lg-4">
-						<div class="container-fluid">
-							<div class="usp row mb-4">
-								<div class="usp-header col-auto p-2 bg-warning">
-									Hardworking
-								</div>
-								<div class="usp-body col-12 p-2 bg-dark">
-									Always work really hard
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-12 col-md-6 col-lg-4">
-						<div class="container-fluid">
-							<div class="usp row mb-4">
-								<div class="usp-header col-auto p-2 bg-warning">
-									Hardworking
-								</div>
-								<div class="usp-body col-12 p-2 bg-dark">
-									Always work really hard
-								</div>
-							</div>
-						</div>
-					</div>
+						wp_reset_postdata();
+					?>
 
 				</div>
 

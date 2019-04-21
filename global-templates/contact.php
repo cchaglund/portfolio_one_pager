@@ -1,3 +1,16 @@
+<?php
+/**
+ * Hero setup.
+ *
+ * @package understrap
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+?>
+
 <section id="wrapper-contact" class="wrapper">
 	<div class="container">
 		<div class="row justify-content-center">

@@ -1,3 +1,25 @@
+<?php
+/**
+ * Hero setup.
+ *
+ * @package understrap
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+$projects = new WP_query([
+	'post_type' => 'pop_project',
+	'posts_per_page' => 4
+]);
+
+if ( !$projects->have_posts() ) {
+	return;
+}
+
+?>
+
 <div id="wrapper-portfolio" class="wrapper">
 	<div class="container">
 		<div class="row justify-content-center">
@@ -5,85 +27,11 @@
 				<div class="container-fluid p-0">
 					<div class="row portfolio">
 
-						<div class="col-12 col-md-6 mb-4 header">
-							<div class="container-fluid p-0">
-								<div class="row no-gutters">
-									<div class="col-10 p-2 bg-primary">
-										<h4>Project title</h4>
-										<h6>Role</h6>
-									</div>
-									<div class="col-2 p-2 bg-success">
-										30hrs
-									</div>
-									<div class="col-12 p-2 bg-secondary">
-										<img src="https://via.placeholder.com/300x200">
-									</div>
-									<div class="col-12 p-2 bg-primary">
-										Tech used
-									</div>
-								</div>
-							</div>
-						</div> <!-- end col -->
+						<?php while ( $projects->have_posts() ) : $projects->the_post(); ?>
+							<?php get_template_part('loop-templates/content', 'project') ?>
+						<?php endwhile; ?>
 
-						<div class="col-12 col-md-6 mb-4 header">
-							<div class="container-fluid p-0">
-								<div class="row no-gutters">
-									<div class="col-10 p-2 bg-primary">
-										<h4>Project title</h4>
-										<h6>Role</h6>
-									</div>
-									<div class="col-2 p-2 bg-success">
-										30hrs
-									</div>
-									<div class="col-12 p-2 bg-secondary">
-										<img src="https://via.placeholder.com/300x200">
-									</div>
-									<div class="col-12 p-2 bg-primary">
-										Tech used
-									</div>
-								</div>
-							</div>
-						</div> <!-- end col -->
-
-						<div class="col-12 col-md-6 mb-4 header">
-							<div class="container-fluid p-0">
-								<div class="row no-gutters">
-									<div class="col-10 p-2 bg-primary">
-										<h4>Project title</h4>
-										<h6>Role</h6>
-									</div>
-									<div class="col-2 p-2 bg-success">
-										30hrs
-									</div>
-									<div class="col-12 p-2 bg-secondary">
-										<img src="https://via.placeholder.com/300x200">
-									</div>
-									<div class="col-12 p-2 bg-primary">
-										Tech used
-									</div>
-								</div>
-							</div>
-						</div> <!-- end col -->
-
-						<div class="col-12 col-md-6 mb-4 header">
-							<div class="container-fluid p-0">
-								<div class="row no-gutters">
-									<div class="col-10 p-2 bg-primary">
-										<h4>Project title</h4>
-										<h6>Role</h6>
-									</div>
-									<div class="col-2 p-2 bg-success">
-										30hrs
-									</div>
-									<div class="col-12 p-2 bg-secondary">
-										<img src="https://via.placeholder.com/300x200">
-									</div>
-									<div class="col-12 p-2 bg-primary">
-										Tech used
-									</div>
-								</div>
-							</div>
-						</div> <!-- end col -->
+						<?php wp_reset_postdata(); ?>
 
 					</div>
 				</div>

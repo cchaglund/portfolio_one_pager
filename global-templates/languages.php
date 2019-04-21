@@ -1,102 +1,50 @@
+<?php
+/**
+ * Hero setup.
+ *
+ * @package understrap
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+$languages = new WP_query([
+	'post_type' => 'pop_language',
+	'posts_per_page' => 10,
+	'meta_key' => 'skill_level',
+	'orderby' => 'meta_value',
+	'order' => 'DESC'
+]);
+
+if (!$languages->have_posts()) {
+	return;
+}
+
+?>
+
 <div id="wrapper-languages" class="wrapper">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-10 col-md-11 languages">
 
 				<div class="mb-5">
-					<h3>These are the languages I know</h3>
+					<h3><?php the_field('language_header') ?></h3>
 				</div>
 
 				<div class="container-fluid p-0">
 					<div class="row">
 
-						<div class="col-12 col-lg-6">
-							<div class="container">
-								<div class="language row mb-4">
-									<div class="language-title col-auto p-2 bg-warning">
-										Javascript
-									</div>
-									<div class="language-progress col-12 p-2 bg-dark">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-												<span class="sr-only">70% Complete</span>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div>
-						</div>
+						<?php while ($languages->have_posts()) : $languages->the_post(); ?>
+							<?php get_template_part('loop-templates/content', 'language') ?>
+						<?php endwhile; ?>
 
-												<div class="col-12 col-lg-6">
-							<div class="container">
-								<div class="language row mb-4">
-									<div class="language-title col-auto p-2 bg-warning">
-										Javascript
-									</div>
-									<div class="language-progress col-12 p-2 bg-dark">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-												<span class="sr-only">70% Complete</span>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div>
-						</div>
+						<?php wp_reset_postdata(); ?>
 
-												<div class="col-12 col-lg-6">
-							<div class="container">
-								<div class="language row mb-4">
-									<div class="language-title col-auto p-2 bg-warning">
-										Javascript
-									</div>
-									<div class="language-progress col-12 p-2 bg-dark">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-												<span class="sr-only">70% Complete</span>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div>
-						</div>
-
-												<div class="col-12 col-lg-6">
-							<div class="container">
-								<div class="language row mb-4">
-									<div class="language-title col-auto p-2 bg-warning">
-										Javascript
-									</div>
-									<div class="language-progress col-12 p-2 bg-dark">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-												<span class="sr-only">70% Complete</span>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div>
-						</div>
-
-												<div class="col-12 col-lg-6">
-							<div class="container">
-								<div class="language row mb-4">
-									<div class="language-title col-auto p-2 bg-warning">
-										Javascript
-									</div>
-									<div class="language-progress col-12 p-2 bg-dark">
-										<div class="progress">
-											<div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-												<span class="sr-only">70% Complete</span>
-											</div>
-										</div> 
-									</div>
-								</div>
-							</div>
-						</div>
 
 					</div> <!-- end row -->
 				</div> <!-- end container -->
+
 			</div> <!-- end col -->
 		</div> <!-- end row -->
 	</div> <!-- end container -->
