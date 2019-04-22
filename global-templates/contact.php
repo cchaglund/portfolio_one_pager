@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="container-fluid p-0">
 
 					<div class="row no-gutters">
-						<div class="col-12 mb-4">
+						<div class="col-auto mb-4">
 							<h2 class="m-0" id="contact-title"><?php the_field('contact_title') ?></h2>
 						</div>
 						<div id="contact-form" class="col-12 p-0 d-flex justify-content-center">

@@ -21,7 +21,7 @@ $img = get_field('image');
 			<div class="col-10 col-md-6">
 				<article class="column container-fluid">
 					<div class="row">
-						<div class="col-auto mb-4 p-2 greeting">
+						<div class="col-auto mb-4 mt-5 p-2 greeting">
 							<h2><?php echo get_field('greeting'); ?></h2>
 						</div>
 					</div>
