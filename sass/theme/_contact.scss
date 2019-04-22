@@ -1,3 +1,11 @@
-#contact-title {
-	background-color: blue;
+#wrapper-contact {
+	background: linear-gradient($secondary 0%, $tertiary 100%);
+	background-attachment: fixed;
+	position: relative;
+	z-index: 2;
+	padding: 0;
+	#contact-title {
+		background-color: $tertiary;
+		padding: 0.5rem 0.75rem;
+	}
 }

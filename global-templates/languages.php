@@ -23,12 +23,13 @@ if (!$languages->have_posts()) {
 
 ?>
 
-<div id="wrapper-languages" class="wrapper">
-	<div class="container">
+<section id="wrapper-languages" class="wrapper">
+
+	<div class="container padding-container">
 		<div class="row justify-content-center">
 			<div class="col-10 col-md-11 languages">
 
-				<div class="mb-5">
+				<div class="mb-5 language-header">
 					<h3><?php the_field('language_header') ?></h3>
 				</div>
 
@@ -41,11 +42,11 @@ if (!$languages->have_posts()) {
 
 						<?php wp_reset_postdata(); ?>
 
-
 					</div> <!-- end row -->
 				</div> <!-- end container -->
 
 			</div> <!-- end col -->
 		</div> <!-- end row -->
 	</div> <!-- end container -->
-</div><!--  end languages wrapper -->
+
+</section><!--  end languages wrapper -->

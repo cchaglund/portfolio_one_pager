@@ -20,22 +20,26 @@ if (!$testimonials->have_posts()) {
 
 ?>
 
-<div id="wrapper-testimonials" class="wrapper">
-	<div class="container">
-		<div class="row testimonials mb-4 justify-content-center">
-			<div class="col-10 col-md-11">
-				<div class="container-fluid p-0">
+<section id="wrapper-testimonials" class="wrapper">
 
-					<div class="row justify-content-center">
-						<?php while ($testimonials->have_posts()) : $testimonials->the_post(); ?>
-							<?php get_template_part('loop-templates/content', 'testimonial') ?>
-						<?php endwhile; ?>
+	<div id="testimonials-cutout">
+		<div class="container padding-container">
+			<div class="row testimonials mb-4 justify-content-center">
+				<div class="col-10 col-md-11">
+					<article class="container-fluid p-0">
 
-						<?php wp_reset_postdata(); ?>
-					</div>
+						<div class="row justify-content-between">
+							<?php while ($testimonials->have_posts()) : $testimonials->the_post(); ?>
+								<?php get_template_part('loop-templates/content', 'testimonial') ?>
+							<?php endwhile; ?>
 
+							<?php wp_reset_postdata(); ?>
+						</div>
+
+					</article>
 				</div>
 			</div>
-		</div>
-	</div> <!-- end container -->
-</div><!--  end testimonials wrapper -->
+		</div> <!-- end container -->
+	</div> <!-- end cutout -->
+	
+</section><!--  end testimonials wrapper -->

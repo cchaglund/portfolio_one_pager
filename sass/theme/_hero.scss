@@ -1,13 +1,11 @@
-#wrapper-testimonials {
+#wrapper-hero {
 	background: linear-gradient($background 0%, $tertiary 100%);
 	background-attachment: fixed;
 	position: relative;
 	z-index: 2;
 	padding: 0;
-	.testimonial {
-		padding: 1.5rem;
-		.header {
-			color: $primary;
-		}
+	display: flex;
+	.greeting {
+		color: $primary;
 	}
 }

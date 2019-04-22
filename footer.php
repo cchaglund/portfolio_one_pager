@@ -12,11 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $container = get_theme_mod( 'understrap_container_type' );
+
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper bg-primary" id="wrapper-footer">
+<div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 
@@ -26,19 +27,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer">
 
-					<div class="row">
-						<div class="col text-center">
-							<i class="fab fa-linkedin-in">text</i>
-						</div>
-						<div class="col text-center">
-							<i class="fab fa-linkedin-in">text</i>
-						</div>
-						<div class="col text-center">
-							<i class="fab fa-linkedin-in">text</i>
-						</div>
-						<div class="col text-center">
-							<i class="fab fa-linkedin-in">text</i>
-						</div>
+					<div class="row justify-content-center">
+						
+						<?php if (get_field('link_1')) : ?>
+							<div class="col-auto text-center">
+								<a href="<?php echo get_field('link_1')['link_1_url'] ?>">
+									<?php echo get_field('link_1')['link_1_name'] ?>
+								</a>
+							</div>
+						<?php endif; ?>
+
+						<?php if (get_field('link_2')) : ?>
+							<div class="col-auto text-center">
+								<a href="<?php echo get_field('link_2')['link_2_url'] ?>">
+									<?php echo get_field('link_2')['link_2_name'] ?>
+								</a>
+							</div>
+						<?php endif; ?>
+
+						<?php if (get_field('link_3')) : ?>
+							<div class="col-auto text-center">
+								<a href="<?php echo get_field('link_3')['link_3_url'] ?>">
+									<?php echo get_field('link_3')['link_3_name'] ?>
+								</a>
+							</div>
+						<?php endif; ?>
+
 					</div>
 
 					</div><!-- .site-info -->

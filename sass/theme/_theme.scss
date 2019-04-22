@@ -5,9 +5,28 @@
 @import 'projects';
 @import 'testimonials';
 @import 'languages';
-@import 'intro';
+@import 'hero';
 @import 'contact';
+@import 'header';
+@import 'footer';
 
-nav {
-	background-color: blue;
+html {
+	scroll-behavior: smooth;
+	width: 100vw;
+}
+
+main {
+	width: 100vw;
+}
+
+body {
+	color: darken($background, 10%);
+}
+
+.padding-container {
+	padding: 2rem 0;
+}
+
+#content {
+	width: 100vw;
 }

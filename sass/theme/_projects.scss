@@ -1,0 +1,15 @@
+#wrapper-projects {
+	background: linear-gradient($background 0%, $tertiary 100%);
+	background-attachment: fixed;
+	position: relative;
+	z-index: 2;
+	.project {
+		height: 100%;
+		.project_title {
+			color: $primary;
+		}
+		.screenshot {
+			border: 0.2rem solid $background;
+		}
+	}
+}

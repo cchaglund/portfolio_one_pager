@@ -1,0 +1,15 @@
+#wrapper-usps {
+	color: $background;
+	background: linear-gradient($secondary 0%, $tertiary 100%);
+	background-attachment: fixed;
+	position: relative;
+	z-index: 2;
+	padding: 0;
+	.usp {
+		.usp-header {
+			margin: 1rem 0;
+			padding: 0.4rem 0.6rem;
+			background-color: $tertiary;
+		}
+	}
+}

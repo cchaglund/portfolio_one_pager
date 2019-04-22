@@ -20,8 +20,9 @@ if (!$usps->have_posts()) {
 
 ?>
 
-<div id="wrapper-usps" class="wrapper">
-	<div class="container">
+<section id="wrapper-usps" class="wrapper">
+
+	<div class="container padding-container">
 		<div class="row justify-content-center">
 			<div class="col-10 col-md-11 usps">
 
@@ -41,4 +42,5 @@ if (!$usps->have_posts()) {
 			</div> <!-- end col -->
 		</div> <!-- end row -->
 	</div> <!-- end container -->
-</div><!--  end usp wrapper -->
+
+</section><!--  end usp wrapper -->
