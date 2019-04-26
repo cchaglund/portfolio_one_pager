@@ -10,6 +10,51 @@
 @import 'header';
 @import 'footer';
 
+/* Main colors */
+
+.has-strong-primary-background-color {
+    background-color: $primary;
+}
+
+.has-primary-color {
+    color: $primary;
+}
+
+.has-secondary-background-color {
+    background-color: $secondary;
+}
+
+.has-secondary-color {
+    color: $secondary;
+}
+
+.has-tertiary-background-color {
+    background-color: $tertiary;
+}
+
+.has-tertiary-color {
+    color: $tertiary;
+}
+
+.has-background-background-color {
+    background-color: $background;
+}
+
+.has-background-color {
+    color: $background;
+}
+
+.has-pale-purple-background-color {
+    background-color: $tert_pale;
+}
+
+.has-pale-purple-color {
+    color: $tert_pale;
+}
+
+/* end main colors */
+
+
 html {
 	scroll-behavior: smooth;
 	width: 100vw;

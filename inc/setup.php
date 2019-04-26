@@ -98,6 +98,44 @@ if ( ! function_exists ( 'understrap_setup' ) ) {
 		// Check and setup theme default settings.
 		understrap_setup_theme_default_settings();
 
+		// Add editor color pallette for Gutenberg
+		add_theme_support('editor-color-palette', [
+	        [
+	            'name' => __( 'beige', 'understrap' ),
+	            'slug' => 'primary',
+	            'color' => '#c5baaf',
+	        ],
+	        [
+	            'name' => __( 'orange', 'understrap' ),
+	            'slug' => 'secondary',
+	            'color' => '#ebcfb2',
+	        ],
+	        [
+	            'name' => __( 'purple', 'understrap' ),
+	            'slug' => 'tertiary',
+	            'color' => '#b38d97',
+	        ],
+	        [
+	            'name' => __( 'pale-purple', 'understrap' ),
+	            'slug' => 'pale-purple',
+	            'color' => '#d5aca9',
+	        ],
+	        [
+	            'name' => __( 'charcoal', 'understrap' ),
+	            'slug' => 'background',
+	            'color' => '#424b54',
+	        ]
+		]);
+
+		add_theme_support( 'align-wide' );
+
+		add_theme_support( 'disable-custom-colors' );
+
+		// Add support for editor styles in Gutenberg
+		add_theme_support( 'editor-styles' );
+
+		add_theme_support( 'wp-block-styles');	
+
 	}
 }
 
